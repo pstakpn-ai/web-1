@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="id"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Desain Grafis dengan Canva untuk Kampus dan Pelayanan</title>
+<style>
+:root{--t:#0F4C5C;--o:#E36414;--y:#FBB13C;--g:#2E8B57;--bg:#FFF8EC;--ink:#1F2A30}
+*{box-sizing:border-box}body{margin:0;font-family:"Segoe UI",Roboto,Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.55}
+header{background:linear-gradient(135deg,var(--t),#1B7A8C);color:#fff;padding:28px 20px 70px;text-align:center}
+header h1{margin:0 0 6px;font-size:clamp(1.5rem,4vw,2.3rem)}header p{margin:0;opacity:.92}
+.badge{display:inline-block;background:var(--y);color:#3a2600;font-weight:700;border-radius:20px;padding:3px 12px;font-size:.8rem;margin-bottom:10px}
+nav{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin:-34px auto 18px;padding:0 10px;position:relative}
+nav button{border:0;background:#fff;color:var(--t);font-weight:700;padding:11px 16px;border-radius:30px;cursor:pointer;box-shadow:0 3px 10px #0002;font-size:.95rem}
+nav button.on{background:var(--o);color:#fff}
+main{max-width:980px;margin:0 auto;padding:0 16px 40px}section{display:none}section.on{display:block}
+h2{color:var(--t);margin:6px 0 4px}.sub{color:#5b6b72;margin-top:0}
+.card{background:#fff;border-radius:16px;padding:18px;box-shadow:0 3px 12px #0001}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px}
+.feat{display:flex;gap:12px;align-items:flex-start;cursor:pointer;border:2px solid transparent}.feat:hover{border-color:var(--y)}
+.feat .ic{font-size:1.8rem;background:#E8F4F1;border-radius:12px;width:52px;height:52px;display:flex;align-items:center;justify-content:center;flex:none}
+.feat b{display:block;color:var(--t)}.feat span{font-size:.88rem;color:#5b6b72}
+.goal li{margin:4px 0}
+/* video */
+.stage{background:linear-gradient(160deg,#0b3641,var(--t));color:#fff;border-radius:16px;padding:22px;min-height:250px;display:grid;grid-template-columns:210px 1fr;gap:18px;align-items:center}
+.stage .big{font-size:4.2rem;text-align:center}.stage h3{margin:0 0 6px;color:var(--y)}.stage p{margin:0}
+.bar{height:6px;background:#ffffff33;border-radius:4px;margin-top:14px;overflow:hidden}.bar i{display:block;height:100%;width:0;background:var(--y)}
+.ctrl{display:flex;gap:8px;margin-top:12px;flex-wrap:wrap;align-items:center}
+.btn{border:0;background:var(--o);color:#fff;font-weight:700;border-radius:24px;padding:9px 18px;cursor:pointer;font-size:.95rem}.btn.alt{background:#fff;color:var(--t);border:2px solid var(--t)}
+.dots{display:flex;gap:6px;margin-left:auto}.dots i{width:10px;height:10px;border-radius:50%;background:#c9d6d9}.dots i.on{background:var(--o)}
+.spec small{display:inline-block;background:#00000033;border-radius:10px;padding:1px 9px;margin-bottom:4px}
+.tips{margin-top:16px;background:#FFF1D6;border-left:6px solid var(--o);border-radius:10px;padding:12px 14px}
+/* video berdampingan */
+.vgrid{display:grid;grid-template-columns:1.25fr 1fr;gap:16px;align-items:start}
+.vbox{background:#000;border-radius:16px;overflow:hidden;box-shadow:0 3px 12px #0001}
+.vbox video{display:block;width:100%;aspect-ratio:16/9;background:#000}
+.vbox .cap{background:#0b3641;color:#fff;padding:8px 14px;font-size:.88rem}
+.vside .stage{grid-template-columns:1fr;text-align:center;min-height:0}
+.vside .stage .big{font-size:3.2rem}
+@media(max-width:820px){.vgrid{grid-template-columns:1fr}}
+/* kuis uji coba */
+.q h3{margin:0 0 10px;color:var(--t)}.opt{display:block;width:100%;text-align:left;background:#F3F7F8;border:2px solid #dbe6e9;border-radius:12px;padding:11px 14px;margin:7px 0;cursor:pointer;font-size:1rem}
+.opt:hover{border-color:var(--t)}.opt.ok{background:#DDF5E6;border-color:var(--g)}.opt.no{background:#FDE3E0;border-color:#d64545}.opt:disabled{cursor:default}
+.fb{margin-top:8px;padding:10px 12px;border-radius:10px;background:#EAF3F6;display:none}
+.prog{display:flex;justify-content:space-between;color:#5b6b72;font-size:.9rem;margin-bottom:8px}
+/* proyek */
+.steps{counter-reset:s;list-style:none;padding:0}.steps li{counter-increment:s;margin:8px 0;padding:10px 12px 10px 52px;position:relative;background:#fff;border-radius:12px;box-shadow:0 2px 8px #0001}
+.steps li:before{content:counter(s);position:absolute;left:12px;top:9px;width:28px;height:28px;border-radius:50%;background:var(--o);color:#fff;font-weight:700;text-align:center;line-height:28px}
+.chk label{display:flex;gap:10px;align-items:center;padding:7px 0;border-bottom:1px dashed #e2e8ea;cursor:pointer}.chk input{width:20px;height:20px;accent-color:var(--g)}
+table{width:100%;border-collapse:collapse;font-size:.92rem}th,td{padding:8px;border-bottom:1px solid #e5ecee;text-align:left}th{background:var(--t);color:#fff}
+.meter{height:12px;background:#e5ecee;border-radius:8px;overflow:hidden;margin:8px 0}.meter i{display:block;height:100%;background:var(--g);width:0;transition:.3s}
+.pjb{border:2px solid var(--t);background:#fff;color:var(--t);font-weight:700;padding:9px 14px;border-radius:24px;cursor:pointer;margin:0 6px 8px 0;font-size:.95rem}.pjb.on{background:var(--t);color:#fff}.chk small{display:block;color:#5b6b72;font-size:.8rem}.how{background:#E8F4F1;border-radius:10px;padding:10px 12px;font-size:.9rem;margin:0 0 8px}#mts{margin-top:6px;font-weight:700}.pimg{width:100%;border-radius:14px;margin:12px 0;display:none}.stage .big img{width:100%;border-radius:12px;display:block}@media(max-width:560px){.stage{grid-template-columns:1fr;text-align:center}}
+</style></head><body>
+<header><div class="badge">Kursus Komputer · STAKPN Sentani</div>
+<h1>Desain Grafis dengan Canva untuk Kampus dan Pelayanan</h1>
+<p>Belajar membuat poster dan media visual untuk perkuliahan, pelayanan, dan kegiatan kampus</p></header>
+<nav id="nav"></nav>
+<main>
+<section id="beranda" class="on"><img src="gambar/banner.png" alt="" class="pimg" onload="this.style.display='block'">
+<h2>Selamat datang, Mahasiswa STAKPN Sentani!</h2><p class="sub">Pilih fitur di bawah ini untuk mulai belajar.</p>
+<div class="grid" id="feats"></div>
+<div class="card" style="margin-top:16px"><h3 style="margin-top:0;color:var(--t)">Tujuan Pembelajaran</h3>
+<ul class="goal"><li>Menjelaskan fungsi Canva sebagai alat desain grafis.</li><li>Menerapkan prinsip dasar desain: kontras, hierarki, dan pemilihan font.</li><li>Membuat poster kegiatan kampus atau pelayanan yang jelas dan menarik.</li><li>Menyimpan dan membagikan karya dalam format yang sesuai.</li></ul>
+<p style="margin-bottom:0"><b>Versi offline:</b> simpan file ini ke HP atau laptop, lalu buka kapan saja tanpa internet. Bagian membuat desain di Canva membutuhkan internet, jadi sketsa ide dulu di buku saat offline.</p></div>
+</section>
+
+<section id="video"><h2>Video Pembelajaran</h2><p class="sub">Pelajari langkah membuat desain di Canva. Tekan Putar, atau pindah langkah sendiri.</p>
+<div class="vgrid">
+<div class="vbox"><video id="rv" controls preload="metadata" playsinline></video><div id="vmsg" style="display:none;background:#FDE3E0;color:#7a1f1f;padding:10px 14px;font-size:.9rem">⚠️ File video tidak ditemukan. Letakkan <b>pembelajaran.mp4</b> di folder <b>video</b> (atau satu folder dengan file HTML ini), lalu muat ulang halaman.<br><br>Atau pilih file video langsung dari komputer Anda:<br><input type="file" id="vpick" accept="video/mp4,video/*" style="margin-top:6px"></div><div class="cap">🎥 Video: Bikin Desain Keren Jadi Gampang, Belajar Canva</div></div>
+<div class="vside">
+<div class="stage"><div class="big" id="vi"></div><div><h3 id="vt"></h3><p id="vp"></p></div></div>
+<div class="bar"><i id="vb"></i></div>
+<div class="ctrl"><button class="btn alt" id="prev">◀ Sebelumnya</button><button class="btn" id="play">▶ Putar</button><button class="btn alt" id="next">Berikutnya ▶</button><div class="dots" id="dots"></div></div>
+</div></div>
+<div class="tips"><b>Catatan instruktur:</b> video dan suara bersifat tambahan. Video utama berada di video/pembelajaran.mp4 (sudah disertakan, tampil di samping panduan langkah). Letakkan juga audio/langkah1.mp3 sampai langkah5.mp3 di folder yang sama dengan file ini. Gambar tiap langkah: gambar/langkah1.png sampai langkah5.png. Jika file belum ada, halaman tetap berjalan memakai ikon dan teks.</div></section>
+
+
+<section id="kuis uji coba"><h2>Kuis Interaktif</h2><p class="sub">Jawab 7 pertanyaan dan lihat skor Anda.</p><div class="card q" id="quiz"></div></section>
+
+<section id="proyek"><h2>Tugas Proyek</h2><p class="sub">Pilih satu proyek, ikuti langkahnya, lalu periksa karya Anda dengan daftar periksa sebelum dikumpulkan.</p>
+<div id="pj"></div><div class="card" id="pjinfo"></div><img id="pjimg" class="pimg" alt="Contoh desain" onload="this.style.display='block'" onerror="this.style.display='none'">
+<ol class="steps" id="pjsteps"></ol>
+<div class="grid"><div class="card chk"><h3 style="margin-top:0;color:var(--t)">Daftar Periksa Karya</h3><div class="how"><b>Untuk apa?</b> Ini alat untuk mengecek karya Anda sendiri. Buka desain Anda, periksa tiap poin, lalu centang jika sudah sesuai. Jika semua tercentang, karya siap dikumpulkan.</div><div id="chk"></div><div class="meter"><i id="mt"></i></div><b id="mtt"></b><div id="mts"></div></div>
+<div class="card"><h3 style="margin-top:0;color:var(--t)">Rubrik Penilaian</h3><table id="rub"></table></div></div></section>
+</main>
+<script>
+const $=s=>document.querySelector(s);
+const tabs=[["beranda","🏠 Beranda"],["video","🎬 Video"],["kuis uji coba","📝 Kuis Uji Coba"],["proyek","🎨 Proyek"]];
+function go(id){document.querySelectorAll("section").forEach(s=>s.classList.toggle("on",s.id===id));document.querySelectorAll("nav button").forEach(b=>b.classList.toggle("on",b.dataset.id===id));if(id!=="video"){stop();$("#rv").pause()}window.scrollTo(0,0)}
+$("#nav").innerHTML=tabs.map(t=>`<button data-id="${t[0]}" class="${t[0]==="beranda"?"on":""}" onclick="go('${t[0]}')">${t[1]}</button>`).join("");
+const F=[["🎬","Video pembelajaran","Langkah membuat desain di Canva","video"],["📝","Kuis interaktif","7 soal dengan penjelasan","kuis"],["🎨","Tugas proyek","Pilih 1 dari 3 proyek desain","proyek"],["📴","Tersedia versi offline","Simpan file ini, buka tanpa internet","beranda"]];
+$("#feats").innerHTML=F.map(f=>`<div class="card feat" onclick="go('${f[3]}')"><div class="ic">${f[0]}</div><div><b>${f[1]}</b><span>${f[2]}</span></div></div>`).join("");
+// video
+const V=[["🌐","Langkah 1: Buka Canva","Buka canva.com atau aplikasi Canva, lalu masuk dengan akun Anda. Pilih jenis proyek yang ingin dibuat, misalnya Poster. Canva menyediakan template siap pakai untuk poster, undangan, brosur, dan media sosial."],["🖼️","Langkah 2: Pilih template","Pilih template yang cocok atau mulai dari halaman kosong. Pilih yang tata letaknya sederhana dan mudah dibaca."],["🧩","Langkah 3: Tambah elemen dan foto","Buka tab Elemen untuk mencari gambar, ikon, dan bentuk. Gunakan kata kunci sesuai tema, misalnya ibadah, seminar, atau kampus."],["🔤","Langkah 4: Atur teks dan warna","Buat judul besar, isi singkat, dan gunakan maksimal 2 sampai 3 jenis font. Pastikan teks kontras dengan latar."],["💾","Langkah 5: Unduh dan bagikan","Klik Bagikan, lalu Unduh. Pilih PNG untuk gambar atau PDF untuk dicetak, kemudian kumpulkan ke instruktur."]];
+const rv=$("#rv");rv.onplay=()=>{if(tm)stop()};
+(function(){const c=["video/pembelajaran.mp4","pembelajaran.mp4","Bikin_Desain_Keren_Jadi_Gampang__Belajar_Canva_Sekarang_.mp4","video/Bikin_Desain_Keren_Jadi_Gampang__Belajar_Canva_Sekarang_.mp4"];let i=0;
+function t(){if(i>=c.length){$("#vmsg").style.display="block";return}rv.src=c[i++];rv.load()}
+rv.onerror=t;t();
+$("#vpick").onchange=e=>{const f=e.target.files[0];if(!f)return;rv.onerror=null;rv.src=URL.createObjectURL(f);rv.load();$("#vmsg").style.display="none";rv.play().catch(()=>{})}})();
+let vi=0,tm=null,pr=0,au=null;
+const dots=$("#dots");dots.innerHTML=V.map(()=>"<i></i>").join("");
+function show(){const v=V[vi];$("#vi").innerHTML=`<img src="gambar/langkah${vi+1}.png" alt="" onerror="this.outerHTML=V[${vi}][0]">`;$("#vt").textContent=v[1];$("#vp").textContent=v[2];dots.querySelectorAll("i").forEach((d,i)=>d.classList.toggle("on",i===vi));$("#vb").style.width="0"}
+function narasi(){if(au)au.pause();au=new Audio("audio/langkah"+(vi+1)+".mp3");au.onended=()=>{if(tm){vi=(vi+1)%V.length;show();pr=0;if(vi===0)stop();else narasi()}};au.play().catch(()=>{au=null})}
+function stop(){clearInterval(tm);tm=null;if(au)au.pause();$("#play").textContent="▶ Putar"}
+function start(){rv.pause();stop();$("#play").textContent="⏸ Jeda";pr=0;narasi();tm=setInterval(()=>{if(au&&!au.paused&&au.duration>0){$("#vb").style.width=(au.currentTime/au.duration*100)+"%";return}pr+=100;$("#vb").style.width=(pr/60)+"%";if(pr>=6000){vi=(vi+1)%V.length;show();pr=0;if(vi===0)stop();else narasi()}},100)}
+function jump(d){vi=(vi+d+V.length)%V.length;show();pr=0;if(tm)narasi()}
+$("#play").onclick=()=>tm?stop():start();$("#next").onclick=()=>jump(1);$("#prev").onclick=()=>jump(-1);show();
+// kuis
+const Q=[["Apa fungsi utama Canva?",["Aplikasi pengolah angka","Platform desain grafis online","Program antivirus","Aplikasi kirim pesan"],1,"Canva adalah platform desain online untuk membuat poster, presentasi, infografis, dan lainnya."],["Apa tujuan utama poster kegiatan?",["Menyampaikan informasi singkat dengan teks dan visual yang menarik","Memenuhi halaman dengan teks panjang","Menghias halaman tanpa isi","Mengubah file menjadi video"],0,"Poster memadukan teks singkat dan gambar agar informasi cepat dipahami."],["Agar teks mudah dibaca, warna teks sebaiknya...",["Sama dengan warna latar","Kontras dengan latar","Selalu merah","Sangat pudar"],1,"Kontras warna membuat teks terlihat jelas, misalnya teks putih di atas latar gelap."],["Jumlah jenis font yang disarankan dalam satu desain adalah...",["Sebanyak mungkin","Satu per kata","Sekitar 2 sampai 3 jenis","Tidak boleh ada font"],2,"Terlalu banyak font membuat desain berantakan. Batasi 2 sampai 3 jenis."],["Apa yang dimaksud hierarki visual?",["Urutan file di folder","Pengaturan ukuran dan warna agar bagian penting terlihat lebih dulu","Jumlah halaman desain","Nama pemilik desain"],1,"Judul dibuat paling besar atau mencolok, lalu detail dibuat lebih kecil."],["Format yang cocok untuk mencetak hasil desain adalah...",["PDF","TXT","EXE","ZIP"],0,"PDF menjaga tata letak dan cocok untuk dicetak. PNG cocok untuk dibagikan sebagai gambar."],["Informasi yang wajib ada pada poster kegiatan kampus adalah...",["Hanya logo kampus","Judul kegiatan, waktu, tempat, dan kontak","Daftar semua peserta","Panjang teks sebanyak mungkin"],1,"Poster harus menjawab apa, kapan, di mana, dan siapa yang bisa dihubungi, dengan judul yang paling menonjol."]];
+let qi=0,sc=0;
+function rq(){const q=Q[qi],box=$("#quiz");if(qi>=Q.length){box.innerHTML=`<h3>Hasil Anda: ${sc} dari ${Q.length}</h3><p>${sc>=6?"Hebat! Anda siap membuat karya desain sendiri.":sc>=4?"Bagus! Ulangi materi video untuk hasil lebih baik.":"Pelajari lagi video dan infografis, lalu coba lagi."}</p><button class="btn" onclick="qi=0;sc=0;rq()">Ulangi kuis</button>`;return}
+box.innerHTML=`<div class="prog"><span>Soal ${qi+1} dari ${Q.length}</span><span>Skor: ${sc}</span></div><h3>${q[0]}</h3>`+q[1].map((o,i)=>`<button class="opt" onclick="ans(${i})">${o}</button>`).join("")+`<div class="fb" id="fb"></div>`}
+function ans(i){const q=Q[qi],b=document.querySelectorAll(".opt");b.forEach((x,k)=>{x.disabled=true;if(k===q[2])x.classList.add("ok")});if(i===q[2])sc++;else b[i].classList.add("no");const f=$("#fb");f.style.display="block";f.innerHTML=(i===q[2]?"<b>Benar!</b> ":"<b>Belum tepat.</b> ")+q[3]+`<br><br><button class="btn" onclick="qi++;rq()">${qi===Q.length-1?"Lihat hasil":"Soal berikutnya"}</button>`}
+rq();
+// proyek
+const R=[["Isi dan ketepatan informasi",30],["Tata letak dan hierarki visual",25],["Warna dan font",20],["Kreativitas",15],["Ketepatan waktu",10]];
+const P=[
+{n:"Poster Kegiatan",img:"contoh_poster.png",d:"Buat poster untuk satu kegiatan kampus atau pelayanan, misalnya seminar, ibadah, atau bakti sosial.",
+s:[["Pilih kegiatan.","Tentukan satu kegiatan yang akan dipromosikan."],["Kumpulkan data.","Judul, tanggal, waktu, tempat, dan kontak panitia."],["Buat sketsa.","Gambar tata letak di buku (bisa dikerjakan offline)."],["Desain di Canva.","Pilih Poster, tambah judul, foto atau elemen, dan teks."],["Unduh dan kumpulkan.","Simpan sebagai PNG atau PDF, lalu presentasikan singkat."]],
+c:[["Ada judul besar yang jelas","Dari jarak 1 meter, judul masih terbaca"],["Informasi singkat dan benar","Cek ulang ejaan, nama, dan angka"],["Maksimal 3 jenis font","Klik teks satu per satu dan lihat nama fontnya"],["Warna teks kontras dengan latar","Tidak ada teks yang sulit dibaca"],["Ada gambar atau ikon pendukung","Gambar sesuai tema dan tidak buram"],["Mencantumkan tanggal, tempat, dan kontak","Jawab: kapan, di mana, hubungi siapa"]]},
+{n:"Undangan Ibadah atau Acara",img:"contoh_undangan.png",d:"Buat undangan digital untuk ibadah, ibadah syukur, atau acara pelayanan yang akan dibagikan lewat WhatsApp.",
+s:[["Tentukan acara.","Tulis nama acara dan siapa yang diundang."],["Siapkan isi.","Salam pembuka, hari, tanggal, jam, tempat, dan penanggung jawab."],["Pilih template Undangan.","Cari kata kunci undangan atau ibadah di Canva."],["Ganti teks dan warna.","Sesuaikan isi dan gunakan warna yang tenang."],["Unduh dan bagikan.","Simpan sebagai PNG agar mudah dikirim lewat WhatsApp."]],
+c:[["Nama acara paling menonjol","Judul acara lebih besar dari teks lain"],["Ada salam atau kalimat undangan","Kalimat sopan dan singkat"],["Hari, tanggal, jam, dan tempat lengkap","Cocokkan dengan jadwal sebenarnya"],["Ada nama atau kontak penanggung jawab","Nomor bisa dihubungi"],["Warna dan font rapi serta mudah dibaca","Maksimal 2 jenis font"],["Hasil diunduh sebagai PNG","Coba buka di HP, teks masih jelas"]]},
+{n:"Konten Media Sosial",img:"contoh_sosmed.png",d:"Buat satu postingan atau story untuk pengumuman kampus, ayat renungan, atau ajakan kegiatan.",
+s:[["Tentukan pesan.","Satu postingan hanya membawa satu pesan utama."],["Pilih ukuran.","Pilih Postingan Instagram atau Story di Canva."],["Tulis teks singkat.","Maksimal dua sampai tiga baris yang besar."],["Tambah visual.","Gunakan foto atau elemen yang mendukung pesan."],["Unduh dan unggah.","Simpan sebagai PNG atau JPG, lalu unggah atau kirim ke instruktur."]],
+c:[["Hanya satu pesan utama","Pesan bisa dipahami dalam 3 detik"],["Teks singkat dan besar","Tidak lebih dari tiga baris"],["Warna teks kontras dengan latar","Tidak ada teks di atas bagian gambar yang ramai"],["Ukuran sesuai (Postingan atau Story)","Cek ukuran di bagian atas Canva"],["Ada logo atau nama akun","Letaknya di pojok, tidak mengganggu"],["Gambar jelas dan sesuai pesan","Tidak buram dan bukan milik orang lain tanpa izin"]]}];
+let pi=0;
+function pj(i){pi=i;const p=P[i];
+$("#pj").innerHTML=P.map((x,k)=>`<button class="pjb${k===i?" on":""}" onclick="pj(${k})">${x.n}</button>`).join("");
+$("#pjinfo").innerHTML=`<b style="color:var(--t)">${p.n}</b><br>${p.d}`;
+const im=$("#pjimg");im.style.display="none";im.src="gambar/"+p.img;
+$("#pjsteps").innerHTML=p.s.map(s=>`<li><b>${s[0]}</b> ${s[1]}</li>`).join("");
+$("#chk").innerHTML=p.c.map(c=>`<label><input type="checkbox" onchange="ck()"><span>${c[0]}<small>${c[1]}</small></span></label>`).join("");
+$("#rub").innerHTML="<tr><th>Aspek</th><th>Skor</th></tr>"+R.map(r=>`<tr><td>${r[0]}</td><td>${r[1]}</td></tr>`).join("");ck()}
+function ck(){const t=P[pi].c.length,n=document.querySelectorAll("#chk input:checked").length;$("#mt").style.width=(n/t*100)+"%";$("#mtt").textContent=n+" dari "+t+" terpenuhi";$("#mts").textContent=n===t?"Karya siap dikumpulkan!":"Periksa lagi poin yang belum tercentang."}
+pj(0);
+</script></body></html>
